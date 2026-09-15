@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="174" viewBox="0 0 820 174" role="img" aria-label="Contribution activity">
+<style>
+.bg{fill:#fff;stroke:#dbeafe}.t{fill:#0f172a;font:700 18px Inter,system-ui,sans-serif}.s{fill:#64748b;font:500 12px Inter,system-ui,sans-serif}
+@media(prefers-color-scheme:dark){.bg{fill:#0f172a;stroke:#334155}.t{fill:#f8fafc}.s{fill:#cbd5e1}}
+</style>
+<rect class="bg" x="1" y="1" width="818" height="172" rx="14"/>
+<text x="24" y="36" class="t">Contribution activity</text>
+<text x="24" y="78" class="s">Contribution activity will appear after the first automatic refresh.</text>
+</svg>
