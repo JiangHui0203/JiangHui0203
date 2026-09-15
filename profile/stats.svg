@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" role="img" aria-label="GitHub snapshot">
+<style>
+.bg{fill:#fff;stroke:#dbeafe}.t{fill:#0f172a;font:700 18px Inter,system-ui,sans-serif}.s{fill:#64748b;font:500 12px Inter,system-ui,sans-serif}
+@media(prefers-color-scheme:dark){.bg{fill:#0f172a;stroke:#334155}.t{fill:#f8fafc}.s{fill:#cbd5e1}}
+</style>
+<rect class="bg" x="1" y="1" width="638" height="118" rx="14"/>
+<text x="28" y="38" class="t">GitHub snapshot</text>
+<text x="28" y="76" class="s">Profile statistics are refreshed automatically by GitHub Actions.</text>
+</svg>
