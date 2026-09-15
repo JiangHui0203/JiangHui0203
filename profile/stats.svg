@@ -1,9 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" role="img" aria-label="GitHub snapshot">
-<style>
-.bg{fill:#fff;stroke:#dbeafe}.t{fill:#0f172a;font:700 18px Inter,system-ui,sans-serif}.s{fill:#64748b;font:500 12px Inter,system-ui,sans-serif}
-@media(prefers-color-scheme:dark){.bg{fill:#0f172a;stroke:#334155}.t{fill:#f8fafc}.s{fill:#cbd5e1}}
-</style>
-<rect class="bg" x="1" y="1" width="638" height="118" rx="14"/>
-<text x="28" y="38" class="t">GitHub snapshot</text>
-<text x="28" y="76" class="s">Profile statistics are refreshed automatically by GitHub Actions.</text>
+  <style>
+    .bg { fill: #ffffff; stroke: #dbeafe; }
+    .title { fill: #0f172a; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .label { fill: #64748b; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .value { fill: #0f172a; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .small { fill: #475569; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .track { fill: #e2e8f0; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; stroke: #334155; }
+      .title, .value { fill: #f8fafc; }
+      .label, .small { fill: #cbd5e1; }
+      .track { fill: #334155; }
+    }
+  </style>
+  <rect class="bg" x="1" y="1" width="638" height="118" rx="14"/>
+  <text x="28" y="34" class="title">GitHub snapshot</text>
+  <text x="42" y="75" class="value">3</text>
+  <text x="42" y="96" class="label">Public repos</text>
+  <text x="162" y="75" class="value">0</text>
+  <text x="162" y="96" class="label">Stars</text>
+  <text x="282" y="75" class="value">0</text>
+  <text x="282" y="96" class="label">Followers</text>
+  <text x="402" y="75" class="value">15</text>
+  <text x="402" y="96" class="label">Contributions</text>
+  <text x="522" y="75" class="value">0</text>
+  <text x="522" y="96" class="label">Forks</text>
 </svg>
