@@ -94,17 +94,17 @@ def fetch_language_bytes(repos: list[dict], token: str):
 def svg_shell(width: int, height: int, title: str, body: str) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(title)}">
   <style>
-    .bg {{ fill: #ffffff; stroke: #dbeafe; }}
-    .title {{ fill: #0f172a; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .label {{ fill: #64748b; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .value {{ fill: #0f172a; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .small {{ fill: #475569; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .track {{ fill: #e2e8f0; }}
+    .bg {{ fill: #fbfaf4; stroke: #d9dfc9; }}
+    .title {{ fill: #294532; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
+    .label {{ fill: #6f765e; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
+    .value {{ fill: #36523e; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
+    .small {{ fill: #59644e; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
+    .track {{ fill: #e7eadc; }}
     @media (prefers-color-scheme: dark) {{
-      .bg {{ fill: #0f172a; stroke: #334155; }}
-      .title, .value {{ fill: #f8fafc; }}
-      .label, .small {{ fill: #cbd5e1; }}
-      .track {{ fill: #334155; }}
+      .bg {{ fill: #15231a; stroke: #405640; }}
+      .title, .value {{ fill: #eef2df; }}
+      .label, .small {{ fill: #c1caaa; }}
+      .track {{ fill: #314434; }}
     }}
   </style>
   <rect class="bg" x="1" y="1" width="{width-2}" height="{height-2}" rx="14"/>
@@ -133,7 +133,7 @@ def render_stats(user: dict, repos: list[dict], contributions: int) -> str:
 
 
 def render_languages(totals: Counter[str]) -> str:
-    palette = ["#0ea5e9", "#14b8a6", "#8b5cf6", "#f59e0b", "#ec4899", "#64748b"]
+    palette = ["#3F5F45", "#5E7A42", "#718B4A", "#8A7A4F", "#9A8B5A", "#65735E"]
     total = sum(totals.values()) or 1
     top = totals.most_common(6)
     chunks = ['<text x="28" y="34" class="title">Top languages</text>']
@@ -153,14 +153,14 @@ def render_languages(totals: Counter[str]) -> str:
 
 def contribution_color(count: int) -> str:
     if count <= 0:
-        return "#e2e8f0"
+        return "#e7eadc"
     if count == 1:
-        return "#bae6fd"
+        return "#cdd9ad"
     if count <= 3:
-        return "#38bdf8"
+        return "#9db575"
     if count <= 6:
-        return "#0ea5e9"
-    return "#0369a1"
+        return "#6f8f4e"
+    return "#3f5f45"
 
 
 def render_activity(calendar: dict) -> str:
@@ -189,11 +189,11 @@ def render_activity(calendar: dict) -> str:
         '<text x="24" y="90" class="small">Wed</text>',
         '<text x="24" y="116" class="small">Fri</text>',
         '<text x="24" y="152" class="small">Less</text>',
-        '<rect x="58" y="143" width="10" height="10" rx="2" fill="#e2e8f0"/>',
-        '<rect x="74" y="143" width="10" height="10" rx="2" fill="#bae6fd"/>',
-        '<rect x="90" y="143" width="10" height="10" rx="2" fill="#38bdf8"/>',
-        '<rect x="106" y="143" width="10" height="10" rx="2" fill="#0ea5e9"/>',
-        '<rect x="122" y="143" width="10" height="10" rx="2" fill="#0369a1"/>',
+        '<rect x="58" y="143" width="10" height="10" rx="2" fill="#e7eadc"/>',
+        '<rect x="74" y="143" width="10" height="10" rx="2" fill="#cdd9ad"/>',
+        '<rect x="90" y="143" width="10" height="10" rx="2" fill="#9db575"/>',
+        '<rect x="106" y="143" width="10" height="10" rx="2" fill="#6f8f4e"/>',
+        '<rect x="122" y="143" width="10" height="10" rx="2" fill="#3f5f45"/>',
         '<text x="140" y="152" class="small">More</text>',
     ])
     return svg_shell(820, 174, "Contribution activity", "\n  ".join(chunks))
