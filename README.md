@@ -5,11 +5,11 @@
 <br/>
 
 <a href="https://github.com/JiangHui0203?tab=followers">
-  <img src="https://img.shields.io/github/followers/JiangHui0203?label=followers&style=flat-square&logo=github&color=2563eb" alt="GitHub followers" />
+  <img src="https://img.shields.io/github/followers/JiangHui0203?label=followers&style=flat-square&logo=github&color=466B3A" alt="GitHub followers" />
 </a>
-<img src="https://komarev.com/ghpvc/?username=JiangHui0203&style=flat-square&color=0891b2&label=profile+views" alt="Profile views" />
+<img src="https://komarev.com/ghpvc/?username=JiangHui0203&style=flat-square&color=718B4A&label=profile+views" alt="Profile views" />
 <a href="mailto:jianghui2024@ia.ac.cn">
-  <img src="https://img.shields.io/badge/say_hi-email-0e7490?style=flat-square&logo=gmail&logoColor=white" alt="Email Hui Jiang" />
+  <img src="https://img.shields.io/badge/say_hi-email-5E7A42?style=flat-square&logo=gmail&logoColor=white" alt="Email Hui Jiang" />
 </a>
 
 <br/><br/>
@@ -53,15 +53,15 @@
       <h3>🧠 More Thinking Is Not Always Better</h3>
       <p><strong>第一作者 · NLPCC 录用</strong></p>
       <p>研究 test-time reasoning 中的推理深度与计算分配：更多推理并不总带来更高准确率，关键在于把额外计算分配给真正需要的实例。</p>
-      <img src="https://img.shields.io/badge/Test--Time-Reasoning-2563eb?style=flat-square" alt="Test-Time Reasoning" />
-      <img src="https://img.shields.io/badge/Adaptive-Computation-0891b2?style=flat-square" alt="Adaptive Computation" />
+      <img src="https://img.shields.io/badge/Test--Time-Reasoning-466B3A?style=flat-square" alt="Test-Time Reasoning" />
+      <img src="https://img.shields.io/badge/Adaptive-Computation-718B4A?style=flat-square" alt="Adaptive Computation" />
     </td>
     <td width="50%" valign="top">
       <h3>🔬 大语言模型中的逻辑神经元</h3>
       <p><strong>第一作者 · 《软件学报》录用</strong></p>
       <p>通过 gradient-based localization 与 inference-time intervention，研究逻辑推理相关 FFN 功能单元，以及不同逻辑能力之间的 shared / task-specific organization。</p>
-      <img src="https://img.shields.io/badge/Mechanistic-Interpretability-2563eb?style=flat-square" alt="Mechanistic Interpretability" />
-      <img src="https://img.shields.io/badge/Activation-Intervention-0891b2?style=flat-square" alt="Activation Intervention" />
+      <img src="https://img.shields.io/badge/Mechanistic-Interpretability-466B3A?style=flat-square" alt="Mechanistic Interpretability" />
+      <img src="https://img.shields.io/badge/Activation-Intervention-718B4A?style=flat-square" alt="Activation Intervention" />
     </td>
   </tr>
   <tr>
@@ -69,18 +69,18 @@
       <h3>🧩 RoTFuse</h3>
       <p><strong>Research in Progress</strong></p>
       <p>探索 test-time reasoning 中的 local reasoning state evaluation：哪个中间推理状态更值得继续？当前聚焦 local value、limited lookahead 与 selective intervention。</p>
-      <img src="https://img.shields.io/badge/LLM-Reasoning-2563eb?style=flat-square" alt="LLM Reasoning" />
-      <img src="https://img.shields.io/badge/State-Evaluation-0891b2?style=flat-square" alt="State Evaluation" />
+      <img src="https://img.shields.io/badge/LLM-Reasoning-466B3A?style=flat-square" alt="LLM Reasoning" />
+      <img src="https://img.shields.io/badge/State-Evaluation-718B4A?style=flat-square" alt="State Evaluation" />
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/JiangHui0203/NiceRice">🍚 NiceRice · 有时好饭</a></h3>
       <p><strong>Vibe Coding · 微信小程序</strong></p>
       <p>从真实生活需求出发，在忙碌日程、距离、天气、餐券与朋友时间之间，寻找一个刚刚好的用餐安排。</p>
       <a href="https://github.com/JiangHui0203/NiceRice">
-        <img src="https://img.shields.io/github/stars/JiangHui0203/NiceRice?style=flat-square&logo=github&color=2563eb" alt="NiceRice stars" />
+        <img src="https://img.shields.io/github/stars/JiangHui0203/NiceRice?style=flat-square&logo=github&color=466B3A" alt="NiceRice stars" />
       </a>
-      <img src="https://img.shields.io/badge/WeChat-MiniProgram-0891b2?style=flat-square" alt="WeChat Mini Program" />
-      <img src="https://img.shields.io/badge/Vibe-Coding-0e7490?style=flat-square" alt="Vibe Coding" />
+      <img src="https://img.shields.io/badge/WeChat-MiniProgram-718B4A?style=flat-square" alt="WeChat Mini Program" />
+      <img src="https://img.shields.io/badge/Vibe-Coding-8A7A4F?style=flat-square" alt="Vibe Coding" />
     </td>
   </tr>
 </table>
@@ -112,16 +112,16 @@
 <div align="center">
 
 <a href="https://github.com/JiangHui0203">
-  <img width="96%" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/activity.svg?v=1" alt="GitHub contribution activity" />
+  <img width="96%" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/activity.svg?v=2" alt="GitHub contribution activity" />
 </a>
 
 <br/>
 
 <a href="https://github.com/JiangHui0203">
-  <img height="168" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/stats.svg?v=1" alt="GitHub stats" />
+  <img height="168" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/stats.svg?v=2" alt="GitHub stats" />
 </a>
 <a href="https://github.com/JiangHui0203?tab=repositories">
-  <img height="168" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/top-langs.svg?v=1" alt="Top languages" />
+  <img height="168" src="https://raw.githubusercontent.com/JiangHui0203/JiangHui0203/main/profile/top-langs.svg?v=2" alt="Top languages" />
 </a>
 
 </div>
@@ -133,10 +133,10 @@
 ### when to think · where to think · when to stop
 
 <a href="https://github.com/JiangHui0203">
-  <img src="https://img.shields.io/badge/GitHub-@JiangHui0203-0f172a?style=for-the-badge&logo=github" alt="GitHub profile" />
+  <img src="https://img.shields.io/badge/GitHub-@JiangHui0203-294532?style=for-the-badge&logo=github" alt="GitHub profile" />
 </a>
 <a href="mailto:jianghui2024@ia.ac.cn">
-  <img src="https://img.shields.io/badge/Email-say_hi-2563eb?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <img src="https://img.shields.io/badge/Email-say_hi-5E7A42?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
 
 <br/><br/>
