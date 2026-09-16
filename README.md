@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="./profile/banner.svg" alt="Hui Jiang — LLM Reasoning, Test-Time Computation and Evaluation" />
+<img width="100%" src="./profile/banner.png" alt="Hui Jiang GitHub Profile Banner" />
 
 <br/>
 
