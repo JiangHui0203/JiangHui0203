@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" role="img" aria-label="Top languages">
   <style>
-    .bg { fill: #fbfcf7; stroke: #d8e3cc; }
-    .title { fill: #294532; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .label { fill: #66785b; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .value { fill: #355E3B; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .small { fill: #53684a; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .track { fill: #e7eedf; }
+    .bg { fill: #fcfff9; stroke: #d8efcf; }
+    .title { fill: #25613a; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .label { fill: #5d7b62; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .value { fill: #2F6F3E; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .small { fill: #4f7056; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .track { fill: #eaf7e3; }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #142118; stroke: #38513c; }
-      .title, .value { fill: #eff6e8; }
-      .label, .small { fill: #c4d4b8; }
-      .track { fill: #2c4130; }
+      .bg { fill: #102419; stroke: #356447; }
+      .title, .value { fill: #e8f8df; }
+      .label, .small { fill: #bfe0c3; }
+      .track { fill: #254832; }
     }
   </style>
   <rect class="bg" x="1" y="1" width="558" height="218" rx="14"/>
   <text x="28" y="34" class="title">Top languages</text>
   <text x="28" y="72" class="small">JavaScript</text>
   <rect x="142" y="62" width="330" height="11" rx="5.5" class="track"/>
-  <rect x="142" y="62" width="289" height="11" rx="5.5" fill="#355E3B"/>
+  <rect x="142" y="62" width="289" height="11" rx="5.5" fill="#2F6F3E"/>
   <text x="492" y="72" class="small">87.9%</text>
   <text x="28" y="97" class="small">Python</text>
   <rect x="142" y="87" width="330" height="11" rx="5.5" class="track"/>
-  <rect x="142" y="87" width="39" height="11" rx="5.5" fill="#4F6F3F"/>
+  <rect x="142" y="87" width="39" height="11" rx="5.5" fill="#3F8F4E"/>
   <text x="492" y="97" class="small">11.9%</text>
   <text x="28" y="122" class="small">Shell</text>
   <rect x="142" y="112" width="330" height="11" rx="5.5" class="track"/>
-  <rect x="142" y="112" width="3" height="11" rx="5.5" fill="#6F8F4E"/>
+  <rect x="142" y="112" width="3" height="11" rx="5.5" fill="#5FBF5F"/>
   <text x="492" y="122" class="small">0.2%</text>
 </svg>
