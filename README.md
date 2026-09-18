@@ -45,6 +45,8 @@
 
 ## ✦ 精选项目 · Selected Work
 
+### 🔬 Research & Reasoning
+
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
@@ -63,12 +65,29 @@
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+    <td colspan="2" valign="top">
       <h3>🧩 RoTFuse</h3>
       <p><strong>Research in Progress</strong></p>
       <p>探索 test-time reasoning 中的 local reasoning state evaluation：哪个中间推理状态更值得继续？当前聚焦 local value、limited lookahead 与 selective intervention。</p>
       <img src="https://img.shields.io/badge/LLM-Reasoning-2F6F3E?style=flat-square" alt="LLM Reasoning" />
       <img src="https://img.shields.io/badge/State-Evaluation-5FBF5F?style=flat-square" alt="State Evaluation" />
+    </td>
+  </tr>
+</table>
+
+### 🛠️ Systems & Builds
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/JiangHui0203/veriagent">🧭 VeriAgent</a></h3>
+      <p><strong>Verifiable Agent Runtime</strong></p>
+      <p>探索可验证、可恢复、可审计的 Agent runtime：把 generation、verification、control 与 observability 拆开，并在逻辑推理与数据分析两类任务中落地。</p>
+      <a href="https://github.com/JiangHui0203/veriagent">
+        <img src="https://img.shields.io/github/stars/JiangHui0203/veriagent?style=flat-square&logo=github&color=2F6F3E" alt="VeriAgent stars" />
+      </a>
+      <img src="https://img.shields.io/badge/Agent-Verification-5FBF5F?style=flat-square" alt="Agent Verification" />
+      <img src="https://img.shields.io/badge/Recovery-Audit-7BCF68?style=flat-square" alt="Recovery and Audit" />
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/JiangHui0203/NiceRice">🍚 NiceRice · 有时好饭</a></h3>
