@@ -382,6 +382,7 @@
   <rect x="717" y="130" width="10" height="10" rx="2" fill="#eaf7e3"><title>2026-09-19: 0</title></rect>
   <rect x="730" y="52" width="10" height="10" rx="2" fill="#eaf7e3"><title>2026-09-20: 0</title></rect>
   <rect x="730" y="65" width="10" height="10" rx="2" fill="#eaf7e3"><title>2026-09-21: 0</title></rect>
+  <rect x="730" y="78" width="10" height="10" rx="2" fill="#eaf7e3"><title>2026-09-22: 0</title></rect>
   <text x="24" y="64" class="small">Mon</text>
   <text x="24" y="90" class="small">Wed</text>
   <text x="24" y="116" class="small">Fri</text>
