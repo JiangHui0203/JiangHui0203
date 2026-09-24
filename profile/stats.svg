@@ -1,28 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" role="img" aria-label="GitHub snapshot">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="206" viewBox="0 0 410 206" role="img" aria-label="GitHub snapshot">
   <style>
-    .bg { fill: #fcfff9; stroke: #d8efcf; }
-    .title { fill: #25613a; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .label { fill: #5d7b62; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .value { fill: #2F6F3E; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .small { fill: #4f7056; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-    .track { fill: #eaf7e3; }
+    .bg { fill: #fbfdfc; stroke: #d3e4da; stroke-width: 1px; }
+    .title { fill: #113f28; font: 700 16px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; letter-spacing: -0.2px; }
+    .subtitle { fill: #527562; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .label { fill: #527562; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .value { fill: #0f7647; font: 700 20px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .small { fill: #355342; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+    .tile { fill: #f2f8f4; stroke: #e1efe7; stroke-width: 1px; rx: 8px; }
+    .track { fill: #e8f4ed; }
+    .c0 { fill: #e8f4ed; }
+    .c1 { fill: #a7f3d0; }
+    .c2 { fill: #4ade80; }
+    .c3 { fill: #16a34a; }
+    .c4 { fill: #0f7647; }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #102419; stroke: #356447; }
-      .title, .value { fill: #e8f8df; }
-      .label, .small { fill: #bfe0c3; }
-      .track { fill: #254832; }
+      .bg { fill: #0e1713; stroke: #1e3a2b; }
+      .title { fill: #eaf7f0; }
+      .subtitle { fill: #7f9f8c; }
+      .label { fill: #8ea99a; }
+      .value { fill: #34d399; }
+      .small { fill: #b8d4c5; }
+      .tile { fill: #13221b; stroke: #203c2d; }
+      .track { fill: #193124; }
+      .c0 { fill: #16271e; }
+      .c1 { fill: #1d4d35; }
+      .c2 { fill: #1d7b4e; }
+      .c3 { fill: #10b981; }
+      .c4 { fill: #34d399; }
     }
   </style>
-  <rect class="bg" x="1" y="1" width="638" height="118" rx="14"/>
-  <text x="28" y="34" class="title">GitHub snapshot</text>
-  <text x="42" y="75" class="value">3</text>
-  <text x="42" y="96" class="label">Public repos</text>
-  <text x="162" y="75" class="value">0</text>
-  <text x="162" y="96" class="label">Stars</text>
-  <text x="282" y="75" class="value">0</text>
-  <text x="282" y="96" class="label">Followers</text>
-  <text x="402" y="75" class="value">28</text>
-  <text x="402" y="96" class="label">Contributions</text>
-  <text x="522" y="75" class="value">0</text>
-  <text x="522" y="96" class="label">Forks</text>
+  <rect class="bg" x="1" y="1" width="408" height="204" rx="12"/>
+  <text x="24" y="32" class="title">GitHub snapshot</text>
+  <circle cx="340" cy="28" r="3.5" fill="#10b981"/>
+  <text x="350" y="32" class="subtitle">Overview</text>
+  <rect class="tile" x="24" y="48" width="114" height="64" rx="8"/>
+  <text x="38" y="78" class="value">3</text>
+  <text x="38" y="98" class="label">Repositories</text>
+  <rect class="tile" x="148" y="48" width="114" height="64" rx="8"/>
+  <text x="162" y="78" class="value">0</text>
+  <text x="162" y="98" class="label">Stars earned</text>
+  <rect class="tile" x="272" y="48" width="114" height="64" rx="8"/>
+  <text x="286" y="78" class="value">0</text>
+  <text x="286" y="98" class="label">Followers</text>
+  <rect class="tile" x="24" y="122" width="176" height="64" rx="8"/>
+  <text x="40" y="152" class="value">28</text>
+  <text x="40" y="172" class="label">Contributions (1 yr)</text>
+  <rect class="tile" x="210" y="122" width="176" height="64" rx="8"/>
+  <text x="226" y="152" class="value">0</text>
+  <text x="226" y="172" class="label">Total forks</text>
 </svg>

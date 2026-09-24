@@ -94,20 +94,36 @@ def fetch_language_bytes(repos: list[dict], token: str):
 def svg_shell(width: int, height: int, title: str, body: str) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(title)}">
   <style>
-    .bg {{ fill: #fcfff9; stroke: #d8efcf; }}
-    .title {{ fill: #25613a; font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .label {{ fill: #5d7b62; font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .value {{ fill: #2F6F3E; font: 700 22px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .small {{ fill: #4f7056; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }}
-    .track {{ fill: #eaf7e3; }}
+    .bg {{ fill: #fbfdfc; stroke: #d3e4da; stroke-width: 1px; }}
+    .title {{ fill: #113f28; font: 700 16px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; letter-spacing: -0.2px; }}
+    .subtitle {{ fill: #527562; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+    .label {{ fill: #527562; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+    .value {{ fill: #0f7647; font: 700 20px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+    .small {{ fill: #355342; font: 500 11px Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }}
+    .tile {{ fill: #f2f8f4; stroke: #e1efe7; stroke-width: 1px; rx: 8px; }}
+    .track {{ fill: #e8f4ed; }}
+    .c0 {{ fill: #e8f4ed; }}
+    .c1 {{ fill: #a7f3d0; }}
+    .c2 {{ fill: #4ade80; }}
+    .c3 {{ fill: #16a34a; }}
+    .c4 {{ fill: #0f7647; }}
     @media (prefers-color-scheme: dark) {{
-      .bg {{ fill: #102419; stroke: #356447; }}
-      .title, .value {{ fill: #e8f8df; }}
-      .label, .small {{ fill: #bfe0c3; }}
-      .track {{ fill: #254832; }}
+      .bg {{ fill: #0e1713; stroke: #1e3a2b; }}
+      .title {{ fill: #eaf7f0; }}
+      .subtitle {{ fill: #7f9f8c; }}
+      .label {{ fill: #8ea99a; }}
+      .value {{ fill: #34d399; }}
+      .small {{ fill: #b8d4c5; }}
+      .tile {{ fill: #13221b; stroke: #203c2d; }}
+      .track {{ fill: #193124; }}
+      .c0 {{ fill: #16271e; }}
+      .c1 {{ fill: #1d4d35; }}
+      .c2 {{ fill: #1d7b4e; }}
+      .c3 {{ fill: #10b981; }}
+      .c4 {{ fill: #34d399; }}
     }}
   </style>
-  <rect class="bg" x="1" y="1" width="{width-2}" height="{height-2}" rx="14"/>
+  <rect class="bg" x="1" y="1" width="{width-2}" height="{height-2}" rx="12"/>
   {body}
 </svg>
 '''
@@ -117,86 +133,110 @@ def render_stats(user: dict, repos: list[dict], contributions: int) -> str:
     owned = [r for r in repos if not r.get("fork")]
     stars = sum(int(r.get("stargazers_count", 0)) for r in owned)
     forks = sum(int(r.get("forks_count", 0)) for r in owned)
-    values = [
-        ("Public repos", len(owned)),
-        ("Stars", stars),
-        ("Followers", int(user.get("followers", 0))),
-        ("Contributions", contributions),
-        ("Forks", forks),
+
+    chunks = [
+        '<text x="24" y="32" class="title">GitHub snapshot</text>',
+        '<circle cx="340" cy="28" r="3.5" fill="#10b981"/>',
+        '<text x="350" y="32" class="subtitle">Overview</text>',
     ]
-    xs = [42, 162, 282, 402, 522]
-    chunks = ['<text x="28" y="34" class="title">GitHub snapshot</text>']
-    for x, (label, value) in zip(xs, values):
-        chunks.append(f'<text x="{x}" y="75" class="value">{value}</text>')
-        chunks.append(f'<text x="{x}" y="96" class="label">{html.escape(label)}</text>')
-    return svg_shell(640, 120, "GitHub snapshot", "\n  ".join(chunks))
+
+    # Row 1 (3 tiles: Repos, Stars, Followers)
+    r1_items = [
+        (24, 114, owned and len(owned) or 0, "Repositories"),
+        (148, 114, stars, "Stars earned"),
+        (272, 114, int(user.get("followers", 0)), "Followers"),
+    ]
+    for x, w, val, lbl in r1_items:
+        chunks.append(f'<rect class="tile" x="{x}" y="48" width="{w}" height="64" rx="8"/>')
+        chunks.append(f'<text x="{x+14}" y="78" class="value">{val}</text>')
+        chunks.append(f'<text x="{x+14}" y="98" class="label">{html.escape(lbl)}</text>')
+
+    # Row 2 (2 tiles: Total contributions, Forks)
+    r2_items = [
+        (24, 176, contributions, "Contributions (1 yr)"),
+        (210, 176, forks, "Total forks"),
+    ]
+    for x, w, val, lbl in r2_items:
+        chunks.append(f'<rect class="tile" x="{x}" y="122" width="{w}" height="64" rx="8"/>')
+        chunks.append(f'<text x="{x+16}" y="152" class="value">{val}</text>')
+        chunks.append(f'<text x="{x+16}" y="172" class="label">{html.escape(lbl)}</text>')
+
+    return svg_shell(410, 206, "GitHub snapshot", "\n  ".join(chunks))
 
 
 def render_languages(totals: Counter[str]) -> str:
-    palette = ["#2F6F3E", "#3F8F4E", "#5FBF5F", "#7BCF68", "#98DC7F", "#B9E9A5"]
+    palette = ["#0f7647", "#10b981", "#34d399", "#5eead4", "#86efac", "#a7f3d0"]
     total = sum(totals.values()) or 1
-    top = totals.most_common(6)
-    chunks = ['<text x="28" y="34" class="title">Top languages</text>']
-    y = 62
+    top = totals.most_common(5)
+
+    chunks = [
+        '<text x="24" y="32" class="title">Top languages</text>',
+        '<text x="386" y="32" text-anchor="end" class="subtitle">By code volume</text>',
+    ]
+
+    y = 54
     for idx, (lang, count) in enumerate(top):
         pct = count / total
-        width = int(330 * pct)
-        chunks.append(f'<text x="28" y="{y+10}" class="small">{html.escape(lang)}</text>')
-        chunks.append(f'<rect x="142" y="{y}" width="330" height="11" rx="5.5" class="track"/>')
-        chunks.append(f'<rect x="142" y="{y}" width="{max(width, 3)}" height="11" rx="5.5" fill="{palette[idx % len(palette)]}"/>')
-        chunks.append(f'<text x="492" y="{y+10}" class="small">{pct*100:.1f}%</text>')
-        y += 25
+        bar_w = int(200 * pct)
+        color = palette[idx % len(palette)]
+        chunks.append(f'<text x="24" y="{y+11}" class="small">{html.escape(lang)}</text>')
+        chunks.append(f'<rect x="122" y="{y+2}" width="200" height="8" rx="4" class="track"/>')
+        chunks.append(f'<rect x="122" y="{y+2}" width="{max(bar_w, 3)}" height="8" rx="4" fill="{color}"/>')
+        chunks.append(f'<text x="334" y="{y+11}" class="small">{pct*100:.1f}%</text>')
+        y += 28
+
     if not top:
-        chunks.append('<text x="28" y="78" class="label">Language data will appear after the first refresh.</text>')
-    return svg_shell(560, 220, "Top languages", "\n  ".join(chunks))
+        chunks.append('<text x="24" y="90" class="label">Language data will appear after the first refresh.</text>')
+
+    return svg_shell(410, 206, "Top languages", "\n  ".join(chunks))
 
 
-def contribution_color(count: int) -> str:
+def get_contribution_level(count: int) -> str:
     if count <= 0:
-        return "#eaf7e3"
+        return "c0"
     if count == 1:
-        return "#cceec1"
+        return "c1"
     if count <= 3:
-        return "#98DC7F"
+        return "c2"
     if count <= 6:
-        return "#5FBF5F"
-    return "#2F6F3E"
+        return "c3"
+    return "c4"
 
 
 def render_activity(calendar: dict) -> str:
     weeks = calendar.get("weeks", [])[-53:]
-    cell = 10
-    gap = 3
-    left = 54
+    cell = 11
+    gap = 3.6
+    left = 52
     top = 52
     chunks = [
-        '<text x="24" y="30" class="title">Contribution activity</text>',
-        f'<text x="790" y="30" text-anchor="end" class="label">{int(calendar.get("totalContributions", 0))} contributions in the last year</text>',
+        '<text x="24" y="32" class="title">Contribution activity</text>',
+        f'<text x="836" y="32" text-anchor="end" class="subtitle">{int(calendar.get("totalContributions", 0))} contributions in the last year</text>',
     ]
     for wi, week in enumerate(weeks):
         for day in week.get("contributionDays", []):
             weekday = int(day.get("weekday", 0))
             count = int(day.get("contributionCount", 0))
-            x = left + wi * (cell + gap)
-            y = top + weekday * (cell + gap)
-            color = contribution_color(count)
+            x = round(left + wi * (cell + gap), 1)
+            y = round(top + weekday * (cell + gap), 1)
+            level = get_contribution_level(count)
             date = html.escape(str(day.get("date", "")))
             chunks.append(
-                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{color}"><title>{date}: {count}</title></rect>'
+                f'<rect class="{level}" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5"><title>{date}: {count}</title></rect>'
             )
     chunks.extend([
-        '<text x="24" y="64" class="small">Mon</text>',
-        '<text x="24" y="90" class="small">Wed</text>',
-        '<text x="24" y="116" class="small">Fri</text>',
-        '<text x="24" y="152" class="small">Less</text>',
-        '<rect x="58" y="143" width="10" height="10" rx="2" fill="#eaf7e3"/>',
-        '<rect x="74" y="143" width="10" height="10" rx="2" fill="#cceec1"/>',
-        '<rect x="90" y="143" width="10" height="10" rx="2" fill="#98DC7F"/>',
-        '<rect x="106" y="143" width="10" height="10" rx="2" fill="#5FBF5F"/>',
-        '<rect x="122" y="143" width="10" height="10" rx="2" fill="#2F6F3E"/>',
-        '<text x="140" y="152" class="small">More</text>',
+        '<text x="24" y="65" class="small">Mon</text>',
+        '<text x="24" y="94" class="small">Wed</text>',
+        '<text x="24" y="123" class="small">Fri</text>',
+        '<text x="24" y="156" class="small">Less</text>',
+        '<rect class="c0" x="58" y="146" width="11" height="11" rx="2.5"/>',
+        '<rect class="c1" x="75" y="146" width="11" height="11" rx="2.5"/>',
+        '<rect class="c2" x="92" y="146" width="11" height="11" rx="2.5"/>',
+        '<rect class="c3" x="109" y="146" width="11" height="11" rx="2.5"/>',
+        '<rect class="c4" x="126" y="146" width="11" height="11" rx="2.5"/>',
+        '<text x="146" y="156" class="small">More</text>',
     ])
-    return svg_shell(820, 174, "Contribution activity", "\n  ".join(chunks))
+    return svg_shell(860, 176, "Contribution activity", "\n  ".join(chunks))
 
 
 def main() -> int:
