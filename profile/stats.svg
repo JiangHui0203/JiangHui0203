@@ -34,7 +34,7 @@
   <circle cx="340" cy="28" r="3.5" fill="#10b981"/>
   <text x="350" y="32" class="subtitle">Overview</text>
   <rect class="tile" x="24" y="48" width="114" height="64" rx="8"/>
-  <text x="38" y="78" class="value">3</text>
+  <text x="38" y="78" class="value">4</text>
   <text x="38" y="98" class="label">Repositories</text>
   <rect class="tile" x="148" y="48" width="114" height="64" rx="8"/>
   <text x="162" y="78" class="value">0</text>
@@ -43,7 +43,7 @@
   <text x="286" y="78" class="value">0</text>
   <text x="286" y="98" class="label">Followers</text>
   <rect class="tile" x="24" y="122" width="176" height="64" rx="8"/>
-  <text x="40" y="152" class="value">28</text>
+  <text x="40" y="152" class="value">60</text>
   <text x="40" y="172" class="label">Contributions (1 yr)</text>
   <rect class="tile" x="210" y="122" width="176" height="64" rx="8"/>
   <text x="226" y="152" class="value">0</text>
