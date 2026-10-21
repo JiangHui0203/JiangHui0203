@@ -6,9 +6,9 @@
 
 # Hui Jiang · 姜慧
 
-**Adaptive Test-Time Reasoning · LLM Evaluation · Agent & Reasoning Systems**
+**LLM Evaluation · Agent / Reasoning Systems · Applied LLM · Research Engineering**
 
-Master's student at **UCAS / CASIA** · Former industry data analyst with 3+ years of experience
+**UCAS / CASIA M.S. (2027)** · **3+ years industry data experience** · **First-author research in LLM reasoning**
 
 <a href="mailto:jianghui2024@ia.ac.cn">
   <img src="https://img.shields.io/badge/Email-jianghui2024%40ia.ac.cn-113F28?style=flat-square&logo=gmail&logoColor=white" alt="Email Hui Jiang" />
@@ -21,85 +21,97 @@ Master's student at **UCAS / CASIA** · Former industry data analyst with 3+ yea
 
 <code>Python</code> · <code>PyTorch</code> · <code>Transformers</code> · <code>SQL</code> · <code>LLM Evaluation</code> · <code>Experiment Design</code>
 
+<br/><br/>
+
+<strong>Open to 2027 graduate roles and research internships</strong><br/>
+LLM Evaluation · Agent · Applied LLM · Research Engineer · Post-training / AI Data
+
 </div>
 
 ---
 
-## About · 关于我
+## 20-second snapshot · 快速了解我
 
-我目前在 **中国科学院大学人工智能学院 / 中国科学院自动化研究所** 攻读硕士学位，研究重点是 **Adaptive Test-Time Reasoning**：如何判断模型什么时候需要更多推理、额外计算应该分配到哪里，以及如何在局部推理状态出现风险时进行选择性干预。
+| | |
+|---|---|
+| **Research** | Adaptive test-time reasoning, reasoning evaluation, selective intervention |
+| **Industry** | 3+ years of large-scale heterogeneous data analysis and delivery |
+| **Research evidence** | First-author work on test-time reasoning and LLM mechanistic analysis |
+| **Engineering** | Python, PyTorch, Transformers, SQL, Linux, Bash, Git, OpenPAI |
+| **Target roles** | LLM Evaluation / Agent / Applied LLM / Research Engineer / AI Data |
 
-在读研之前，我曾在 **厦门市美亚柏科信息股份有限公司北京分公司**担任数据分析师三年多，长期处理百万至亿级多源异构数据，并参与关系发现、身份融合、规则策略、验证评估与业务交付。
+我关注的核心问题是：
 
-> **Research thesis**  
 > **When should a model think more, where should additional test-time compute be spent, and when should we intervene?**
 
-### Current focus
-
-- **Adaptive Reasoning** — 按任务与状态动态决定推理深度，而不是统一增加思考预算。
-- **Test-Time Compute Allocation** — 研究额外推理计算在何时真正产生价值，以及如何进行预算分配。
-- **Reasoning State Evaluation** — 评估中间推理状态的局部价值、风险与可修复性。
-- **Selective Intervention** — 只在高风险或高价值位置触发候选生成、验证与局部修复。
-- **Mechanistic Analysis** — 从内部表示与功能单元角度理解逻辑推理能力的组织方式。
-
----
-
-## Research trajectory · 研究主线
+我的研究与工程经历可以概括为一条连续路径：
 
 ```text
-Understand reasoning
-        ↓
+Large-scale data & evaluation
+          ↓
+Understand model reasoning
+          ↓
 Evaluate reasoning states
-        ↓
+          ↓
 Allocate test-time compute
-        ↓
+          ↓
 Intervene selectively
 ```
 
-我希望把不同工作收束到同一个问题：**如何让推理模型把有限计算花在真正值得思考的位置。**
+---
+
+## What I can bring · 我能带来的能力
+
+### 1. LLM evaluation & reasoning analysis
+
+能够从问题定义、baseline、数据切分、统计检验、计算成本到 failure analysis 搭建完整实验闭环，而不是只汇报单一 accuracy。
+
+### 2. Research engineering
+
+长期使用 **Python / PyTorch / Transformers / Linux / OpenPAI** 完成模型推理、日志采集、轨迹分析、实验调度与结果审计；关注可复现性、paired comparison 和 compute accounting。
+
+### 3. Real-world data experience
+
+研究生之前有三年多产业数据经验，长期处理百万至亿级多源异构数据，具备 SQL、数据治理、关系发现、规则策略、验证评估和业务交付经验。
+
+### 4. Failure-oriented problem solving
+
+研究中会保留负结果并追查原因。例如在 selective intervention 中，我会区分 candidate diversity、selector signal、semantic rescue 与 format / termination rescue，而不是只保留“成功案例”。
 
 ---
 
 ## Selected research · 代表研究
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>More Thinking Is Not Always Better</h3>
-      <p><strong>First Author · NLPCC 2026</strong></p>
-      <p>研究测试时推理深度与计算分配。实验表明，更多推理并不必然带来更高准确率；真正的问题是识别哪些实例值得额外计算，并避免无效甚至有害的过度思考。</p>
-      <p>
-        <a href="https://openreview.net/pdf?id=RigeZLi611">Paper</a>
-        · <strong>Test-Time Reasoning</strong>
-        · <strong>Adaptive Computation</strong>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>大语言模型中的逻辑神经元</h3>
-      <p><strong>第一作者 · 《软件学报》</strong></p>
-      <p>通过 gradient-based localization 与 inference-time intervention 分析逻辑推理相关功能单元，研究不同逻辑能力之间的共享与任务特异组织，并验证局部干预对推理表现的影响。</p>
-      <p>
-        <a href="https://www.jos.org.cn/josen/article/pdf/7704">Paper</a>
-        · <a href="https://doi.org/10.13328/j.cnki.jos.007704">DOI</a>
-        · <strong>Mechanistic Interpretability</strong>
-      </p>
-    </td>
-  </tr>
-</table>
+### More Thinking Is Not Always Better
+**First Author · NLPCC 2026**
+
+研究 test-time reasoning 中“更多思考是否一定更好”。结果表明，额外推理计算的收益并不单调，真正重要的是识别哪些实例值得更多计算，并避免无效或有害的 overthinking。
+
+**Keywords:** Test-Time Reasoning · Adaptive Computation · Reasoning Evaluation  
+[Paper](https://openreview.net/pdf?id=RigeZLi611)
+
+### 大语言模型中的逻辑神经元
+**第一作者 · 《软件学报》**
+
+通过 gradient-based localization 与 inference-time intervention 分析逻辑推理相关功能单元，研究不同逻辑能力间的共享与任务特异组织，并验证局部干预对推理表现的影响。
+
+**Keywords:** Mechanistic Interpretability · Logic Reasoning · Activation Intervention  
+[Paper](https://www.jos.org.cn/josen/article/pdf/7704) · [DOI](https://doi.org/10.13328/j.cnki.jos.007704)
 
 ### RoTFuse · Research in Progress
 
-当前工作进一步把问题推进到**推理过程内部**：从当前真实前缀出发，在低置信推理单元附近触发有限探索，生成同前缀候选并进行选择，研究局部状态是否存在可预测、可利用的修复价值。
+进一步把问题推进到推理过程内部：在当前真实前缀下识别低置信推理单元，触发有限候选探索，并研究能否以受控额外计算实现局部修复。
 
-重点关注：
+当前重点包括：
 
 - low-confidence triggering;
 - same-prefix candidate generation;
-- local value / candidate selection;
+- reasoning-state / local-value evaluation;
 - selective intervention under explicit compute budgets;
-- end-to-end correctness vs. additional inference cost.
+- end-to-end correctness vs. additional inference cost;
+- negative-result and selector-failure analysis.
 
-这条工作同时保留负结果和失败分析：候选差异不足、局部优势事件稀疏、selector signal 弱，以及“格式/终止修复”和真正语义修复之间的区别，都是当前研究的重要组成部分。
+**Research question:** *Can we identify where additional reasoning is actually worth paying for?*
 
 ---
 
@@ -109,9 +121,11 @@ Intervene selectively
 **Data Analyst · 2021.04 — 2024.08**
 
 - 使用 **SQL** 处理百万至亿级多源异构数据，完成数据清洗、治理、分析与验证。
-- 参与复杂关系发现、跨域身份数据融合与规则策略设计。
-- 覆盖从需求拆解、数据建模、实验验证到最终交付的完整工作流。
-- 这段经历也塑造了我现在的研究习惯：**先定义可验证问题，再构建数据与评测，最后讨论方法收益。**
+- 深度参与复杂关系发现、跨域身份数据融合与业务数据分析建模。
+- 参与规则策略设计，并通过数据回放与指标验证持续修正方案。
+- 覆盖需求拆解、数据建模、实验验证到最终交付的完整工作流。
+
+这段经历让我在进入 LLM 研究后仍然保持一个很工程化的习惯：**先定义可验证问题，再构建数据与评测，最后讨论方法收益。**
 
 ---
 
@@ -122,10 +136,12 @@ Intervene selectively
 
 探索可验证、可恢复、可审计的 Agent runtime，将 generation、verification、control 与 observability 解耦，并关注多步执行中的状态恢复、验证与错误归因。
 
+**Relevant to:** Agent Evaluation · Runtime Control · Verification · Observability
+
 ### [NiceRice · 有时好饭](https://github.com/JiangHui0203/NiceRice)
 **WeChat Mini Program · Side Project**
 
-一个从真实生活需求出发的轻量项目：在日程、距离、天气、偏好与朋友时间之间寻找更合适的用餐安排。作为研究之外的工程实践保留在这里。
+从真实生活约束出发的轻量工程实践，在日程、距离、天气、偏好与朋友时间之间寻找更合适的用餐安排。
 
 ---
 
@@ -137,7 +153,7 @@ Intervene selectively
 **Engineering / Data**  
 `Python` · `SQL` · `Linux` · `Bash` · `Git` · `OpenPAI` · `Data Processing`
 
-**What I care about**  
+**Research practice**  
 rigorous baselines · paired comparisons · compute accounting · reproducible evaluation · failure analysis
 
 ---
@@ -154,11 +170,11 @@ rigorous baselines · paired comparisons · compute accounting · reproducible e
 
 ## English snapshot
 
-I am a Master's student at the **School of Artificial Intelligence, University of Chinese Academy of Sciences (UCAS)** / **Institute of Automation, Chinese Academy of Sciences (CASIA)**. My research centers on **adaptive test-time reasoning**: evaluating intermediate reasoning states, allocating inference-time compute, and selectively intervening when additional computation is likely to help.
+I am a Master's student at the **School of Artificial Intelligence, University of Chinese Academy of Sciences (UCAS)** / **Institute of Automation, Chinese Academy of Sciences (CASIA)**, with more than three years of prior industry experience in large-scale data analysis.
 
-Before graduate school, I worked for more than three years as an industry data analyst on large-scale heterogeneous data. This background strongly influences how I approach LLM research: define measurable failure modes, build controlled evaluations, account for compute, and analyze where a method genuinely adds value.
+My current research centers on **adaptive test-time reasoning**: evaluating intermediate reasoning states, allocating inference-time compute, and selectively intervening when additional computation is likely to help.
 
-**Research interests:** LLM reasoning · test-time compute · reasoning evaluation · selective intervention · agent evaluation.
+I am particularly interested in roles around **LLM evaluation, Agent systems, applied LLMs, research engineering, and post-training / AI data**. My strengths lie in rigorous evaluation, experimental design, large-scale data work, reasoning analysis, and research-to-engineering execution.
 
 ---
 
