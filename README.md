@@ -60,6 +60,21 @@ Intervene selectively
 
 ---
 
+## Portfolio map · 公开作品入口
+
+如果你只有几分钟，可以按下面的顺序了解我的工作：
+
+| Repository / Work | What it shows | Role in my profile |
+|---|---|---|
+| [**VeriAgent**](https://github.com/JiangHui0203/veriagent) | Verifiable Agent runtime, deterministic checks, recovery, structured traces, constrained Data Agent | **Agent / Research Engineering** |
+| [**Homework**](https://github.com/JiangHui0203/Homework) | Agent knowledge system, LLM/Agent/Data knowledge base, pattern-oriented LeetCode Hot100 | **Systems thinking / Continuous learning** |
+| [**NiceRice**](https://github.com/JiangHui0203/NiceRice) | Local-first WeChat Mini Program for real-world multi-constraint planning | **Product engineering / Side project** |
+| **RoTFuse** *(private research repo)* | Low-confidence triggering, same-prefix exploration, candidate selection, compute-aware selective intervention | **Adaptive reasoning research** |
+
+**Recommended recruiter path:** Profile → VeriAgent → Selected Research → Homework / NiceRice as supporting evidence.
+
+---
+
 ## What I can bring · 我能带来的能力
 
 ### 1. LLM evaluation & reasoning analysis
@@ -69,6 +84,8 @@ Intervene selectively
 ### 2. Research engineering
 
 长期使用 **Python / PyTorch / Transformers / Linux / OpenPAI** 完成模型推理、日志采集、轨迹分析、实验调度与结果审计；关注可复现性、paired comparison 和 compute accounting。
+
+公开工程项目 [**VeriAgent**](https://github.com/JiangHui0203/veriagent) 进一步展示了我对 Agent runtime 的工程理解：将 generation、verification、control 与 observability 分离，并在逻辑推理与结构化数据分析场景中保留可检查的执行证据。
 
 ### 3. Real-world data experience
 
@@ -134,14 +151,27 @@ Intervene selectively
 ### [VeriAgent](https://github.com/JiangHui0203/veriagent)
 **Verifiable Agent Runtime**
 
-探索可验证、可恢复、可审计的 Agent runtime，将 generation、verification、control 与 observability 解耦，并关注多步执行中的状态恢复、验证与错误归因。
+这是目前最能体现我 Agent / Research Engineering 能力的公开项目。项目包含两条相互独立但共享 verification-first 理念的 runtime：
 
-**Relevant to:** Agent Evaluation · Runtime Control · Verification · Observability
+- **ProofWriter VeriAgent**：面向多跳逻辑推理的 evidence retrieval、proof verification、controller-driven recovery 与 structured trace；
+- **Olist Data Agent**：将 LLM 分析与 deterministic metric contract、read-only SQL、安全校验、cross-check 和 trace 结合起来的约束型数据分析 Agent。
+
+**Relevant to:** Agent Evaluation · Runtime Control · Verification · Recovery · Observability · Data Agent
+
+### [Homework · AI / Agent Knowledge & Interview Practice](https://github.com/JiangHui0203/Homework)
+
+长期维护的个人知识与面试准备仓库。当前包括：
+
+- Agent Knowledge System；
+- LLM / Agent / Data Knowledge System；
+- Pattern-oriented LeetCode Hot100，包括核心母题、模板库和专题解法。
+
+它更接近一个持续维护的 **personal knowledge infrastructure**，而不是零散笔记集合。
 
 ### [NiceRice · 有时好饭](https://github.com/JiangHui0203/NiceRice)
 **WeChat Mini Program · Side Project**
 
-从真实生活约束出发的轻量工程实践，在日程、距离、天气、偏好与朋友时间之间寻找更合适的用餐安排。
+从真实生活约束出发的轻量工程实践，在日程、距离、天气、偏好与朋友时间之间寻找更合适的用餐安排，并采用 local-first 思路处理个人生活数据。
 
 ---
 
@@ -175,6 +205,8 @@ I am a Master's student at the **School of Artificial Intelligence, University o
 My current research centers on **adaptive test-time reasoning**: evaluating intermediate reasoning states, allocating inference-time compute, and selectively intervening when additional computation is likely to help.
 
 I am particularly interested in roles around **LLM evaluation, Agent systems, applied LLMs, research engineering, and post-training / AI data**. My strengths lie in rigorous evaluation, experimental design, large-scale data work, reasoning analysis, and research-to-engineering execution.
+
+For public engineering work, see [**VeriAgent**](https://github.com/JiangHui0203/veriagent). For my maintained Agent / LLM / Data knowledge systems and interview preparation, see [**Homework**](https://github.com/JiangHui0203/Homework).
 
 ---
 
