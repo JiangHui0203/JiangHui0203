@@ -34,12 +34,12 @@
   <text x="386" y="32" text-anchor="end" class="subtitle">By code volume</text>
   <text x="24" y="65" class="small">JavaScript</text>
   <rect x="122" y="56" width="200" height="8" rx="4" class="track"/>
-  <rect x="122" y="56" width="161" height="8" rx="4" fill="#0f7647"/>
-  <text x="334" y="65" class="small">80.6%</text>
+  <rect x="122" y="56" width="160" height="8" rx="4" fill="#0f7647"/>
+  <text x="334" y="65" class="small">80.1%</text>
   <text x="24" y="93" class="small">Python</text>
   <rect x="122" y="84" width="200" height="8" rx="4" class="track"/>
-  <rect x="122" y="84" width="38" height="8" rx="4" fill="#10b981"/>
-  <text x="334" y="93" class="small">19.2%</text>
+  <rect x="122" y="84" width="39" height="8" rx="4" fill="#10b981"/>
+  <text x="334" y="93" class="small">19.6%</text>
   <text x="24" y="121" class="small">Shell</text>
   <rect x="122" y="112" width="200" height="8" rx="4" class="track"/>
   <rect x="122" y="112" width="3" height="8" rx="4" fill="#34d399"/>
